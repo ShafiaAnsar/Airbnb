@@ -1,6 +1,8 @@
 'use client'
 
 import { useCallback, useEffect, useState } from "react"
+import Button from "../Button";
+import {IoMdClose} from 'react-icons/io'
 
 interface ModalProps {
   isOpen?: boolean;
@@ -73,9 +75,41 @@ const Modal:React.FC<ModalProps> = ({
               {/* //Content */}
               <div className={`translation duration-300 h-full
                ${showModal ? 'translate-y-0' : 'translate-y-full'} 
-               ${showModal ? 'opacity-100' : 'opacity-0'}
-               
-               `}>
+               ${showModal ? 'opacity-100' : 'opacity-0'}d`}>
+                <div className="
+                translate
+                h-full
+                md:h-auto
+                relative
+                rounded-lg
+                shadow-lg
+                border-0
+                lg:h-auto
+                flex flex-col w-full bg-white focus:outline-none outline-none
+                ">
+                  {/* Header */}
+                  <div className="flex items-center p-6 rounded-t relative border-b-[1px] justify-center">
+                    <button 
+                    onClick={handleClose}
+                    className=" p-1 hover:opacity-70 border-0 transition absolute left-9 ">
+                      <IoMdClose size= {18}/> 
+                    </button>
+                    <div className="text-lg font-semibold">
+                      {title}
+                    </div>
+                  </div>
+                  {/* Body */}
+                  <div className="relative flex-auto p-6">
+                    {body}
+                  </div>
+                  {/* footer */}
+                  <div className="flex flex-col gap-2 p-6">
+                    <div className="flex flex-row items-center gap-4 w-full">
+                      <Button label="My Button"/>
+                    </div>
+
+                  </div>
+                </div>
 
               </div>
 
