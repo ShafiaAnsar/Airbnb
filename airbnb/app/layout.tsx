@@ -7,7 +7,7 @@ import ClientOnly from "./components/ClientOnly";
 import RegisterModal from "./components/modals/RegisterModal";
 import ToasterProviders from "./providers/ToasterProviders";
 import LoginModal from "./components/modals/LoginModal";
-import getCurrentUser from "./actions/getCurrentUser";
+import  getCurrentUser from "./actions/getCurrentUser";
 export const metadata: Metadata = {
   title: "Airbnb",
   description: "Airbnb Clone",
