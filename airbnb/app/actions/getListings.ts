@@ -88,8 +88,8 @@ export default async function getListings(
       ...listing,
       createdAt: listing.createdAt.toISOString(),
     }));
-
-    return listings;
+ 
+    return safeListings;
   } catch (error: any) {
     throw new Error(error);
   }
