@@ -6,8 +6,7 @@ import ListingHead from "@/app/components/listings/ListingHead"
 import ListingInfo from "@/app/components/listings/ListingInfo"
 import ListingReservation from "@/app/components/listings/ListingReservation"
 import useLoginModal from "@/app/hooks/useLoginModal"
-import { SafeListings, SafeUser } from "@/app/types"
-import { Reservation } from "@prisma/client"
+import { SafeListings, SafeReservation, SafeUser } from "@/app/types"
 import axios from "axios"
 import { differenceInCalendarDays, eachDayOfInterval, setDate } from "date-fns"
 import { useRouter } from "next/navigation"
@@ -22,7 +21,7 @@ const initialDateRange={
 }
 
 interface ListingClientProps{
-    reservations?:Reservation[]
+    reservations?:SafeReservation[]
     listing:SafeListings &{
         user:SafeUser
     }
@@ -66,7 +65,7 @@ const ListingClient:React.FC<ListingClientProps> = ({listing, reservations =[] ,
         .then(()=>{
             toast.success("Listing reserved")
             setDateRange(initialDateRange)
-            //Redirect to /trips
+            router.push("/trips")
 
             router.refresh()
         })
