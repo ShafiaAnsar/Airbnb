@@ -6,8 +6,8 @@ import TripsClient from "./TripsClient";
  
 
  const TripsPage = async () => {
-    const currentnUser = await getCurrentUser()
-    if(!currentnUser){
+    const currentUser = await getCurrentUser()
+    if(!currentUser){
         return (
             <ClientOnly>
                 <EmptyState
@@ -17,7 +17,7 @@ import TripsClient from "./TripsClient";
             </ClientOnly>
         )
     }
-    const reservations = await getReservations({userId:currentnUser.id})
+    const reservations = await getReservations({userId:currentUser.id})
     if(reservations.length == 0){
         return (
             <ClientOnly>
@@ -30,7 +30,7 @@ import TripsClient from "./TripsClient";
     }
     return (
         <ClientOnly>
-            <TripsClient reservations={reservations} currentnUser={currentnUser} />
+            <TripsClient reservations={reservations} currentUser={currentUser} />
 
         </ClientOnly>
     )
