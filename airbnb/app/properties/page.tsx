@@ -6,8 +6,8 @@ import PropertiesClient from "./PropertiesClient";
  
 
  const PropertiesPage = async () => {
-    const currentnUser = await getCurrentUser()
-    if(!currentnUser){
+    const currentUser = await getCurrentUser()
+    if(!currentUser){
         return (
             <ClientOnly>
                 <EmptyState
@@ -17,7 +17,7 @@ import PropertiesClient from "./PropertiesClient";
             </ClientOnly>
         )
     }
-    const listings = await getListings({userId:currentnUser.id})
+    const listings = await getListings({userId:currentUser.id})
     if(listings.length == 0){
         return (
             <ClientOnly>
@@ -30,7 +30,7 @@ import PropertiesClient from "./PropertiesClient";
     }
     return (
         <ClientOnly>
-            <PropertiesClient listings={listings} currentnUser={currentnUser} />
+            <PropertiesClient listings={listings} currentUser={currentUser} />
 
         </ClientOnly>
     )

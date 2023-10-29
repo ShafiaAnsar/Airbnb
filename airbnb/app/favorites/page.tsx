@@ -7,7 +7,7 @@ import FavoritesClient from './FavoritesClient'
 
 const ListingPage =async () => {
     const listing = await getFavoriteListing()
-    const  currentUser = getCurrentUser()
+    const  currentUser = await getCurrentUser()
     if(listing.length ===0){
         return (
             <ClientOnly>
