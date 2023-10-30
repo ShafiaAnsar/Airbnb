@@ -1,9 +1,6 @@
 # 🌟 The Ultimate Airbnb Clone 🌟
 
 Welcome to the **Airbnb Clone** repository, where we're bringing the world of travel and cozy accommodations right to your codebase. 🌍✈️
-
-![Airbnb Clone](https://ibb.co/F8PfRG3)
-
 ## 🎉 Features That Will Make You Jump for Joy
 
 - **Tailwind Magic**: Our designs are so hot, they might make you want to go on vacation right away. 🏖️
