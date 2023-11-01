@@ -2,8 +2,8 @@
 
 Welcome to the **Airbnb Clone** repository, where we're bringing the world of travel and cozy accommodations right to your codebase. 🌍✈️
 ## 🎉 Features That Will Make You Jump for Joy
-##Home Page  ![image](https://github.com/ShafiaAnsar/Airbnb/assets/92047387/5b545b2a-a3fb-4202-8260-e4749ccd8574)
-##Register and Login Page ![Register page](https://github.com/ShafiaAnsar/Airbnb/assets/92047387/f6b660f4-6963-41cd-a6e5-f290edfbfa1f)
+## Home Page  ![image](https://github.com/ShafiaAnsar/Airbnb/assets/92047387/5b545b2a-a3fb-4202-8260-e4749ccd8574)
+## Register and Login Page ![Register page](https://github.com/ShafiaAnsar/Airbnb/assets/92047387/f6b660f4-6963-41cd-a6e5-f290edfbfa1f)
 
 - **Tailwind Magic**: Our designs are so hot, they might make you want to go on vacation right away. 🏖️
 - **Authentication Awesomeness**: Log in with your credentials, Google, or GitHub. It's as easy as catching a flight! 🚀
